@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
-    <loc>http://v3x.pw/</loc> 
+    <loc>https://v3x.pw/</loc> 
   </url>
   <url>
-    <loc>http://v3x.pw/tools</loc> 
+    <loc>https://v3x.pw/tools</loc> 
   </url>
   <url>
-    <loc>http://subscriptions.v3x.pw/</loc> 
+    <loc>https://subscriptions.v3x.pw/</loc> 
   </url>
   <url>
-    <loc>http://subscriptions.v3x.pw/unsubscribe</loc> 
+    <loc>https://subscriptions.v3x.pw/unsubscribe</loc> 
   </url>
 </urlset>
