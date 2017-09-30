@@ -1,6 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /blog/about
+permalink: /about
 ---
 
