@@ -18,8 +18,7 @@ author:
 
 paginate:         5
 
-gems: [jekyll-paginate, jekyll-gist]
-
+gems: [jekyll-paginate, jekyll-gist, jekyll-sitemap]
 # Custom vars
 version:          2.1.0
 
