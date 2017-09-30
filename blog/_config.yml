@@ -3,14 +3,14 @@ markdown:         redcarpet
 highlighter:      rouge
 
 # Permalinks
-permalink:        pretty
+permalink: /blog/:title
 
 # Setup
 title:            v3x
 tagline:          'dev blog'
 description:      'Authored by <a href="https://twitter.com/mdo" target="_blank">@chrispauley</a>.'
 url:              http://v3x.pw/blog/
-baseurl:          /
+baseurl:          /blog/
 
 author:
   name:           'Chris Pauley'
