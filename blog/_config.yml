@@ -3,7 +3,7 @@ markdown:         redcarpet
 highlighter:      rouge
 
 # Permalinks
-permalink: /blog/:categories/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title
 
 # Setup
 title:            v3x
