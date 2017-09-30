@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://v3x.pw/blog//blog/2017/09/29/puppeteer-connect-proxy-cookies/</loc>
+<loc>http://v3x.pw/blog//2017/09/29/puppeteer-connect-proxy-cookies/</loc>
 <lastmod>2017-09-29T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://v3x.pw/blog//blog/about/</loc>
+<loc>http://v3x.pw/blog//about/</loc>
 </url>
 <url>
-<loc>http://v3x.pw/blog//blog/</loc>
+<loc>http://v3x.pw/blog//</loc>
 </url>
 </urlset>
