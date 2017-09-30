@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>v3x</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2017-09-29T21:40:49-05:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://v3x.pw/blog//atom.xml" rel="self"/>
+ <link href="http://v3x.pw/blog//"/>
+ <updated>2017-09-29T21:55:14-05:00</updated>
+ <id>http://v3x.pw/blog/</id>
  <author>
    <name>Chris Pauley</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Missing Puppeteer Examples</title>
-   <link href="http://localhost:4000/2017/09/29/hello-friend/"/>
+   <link href="http://v3x.pw/blog//2017/09/29/hello-friend/"/>
    <updated>2017-09-29T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2017/09/29/hello-friend</id>
+   <id>http://v3x.pw/blog//2017/09/29/hello-friend</id>
    <content type="html">&lt;p&gt;Google finally released &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Chrome Headless&lt;/a&gt; and shortly after, a nodejs library called &lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/&quot;&gt;Puppeteer&lt;/a&gt;. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, &lt;/p&gt;
 
 &lt;h3&gt;Connecting to an existing process&lt;/h3&gt;
