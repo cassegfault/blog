@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>v3x</title>
- <link href="http://v3x.pw/blog//atom.xml" rel="self"/>
- <link href="http://v3x.pw/blog//"/>
- <updated>2017-09-30T12:38:16-05:00</updated>
- <id>http://v3x.pw/blog/</id>
+ <link href="http://v3x.pw/blog/atom.xml" rel="self"/>
+ <link href="http://v3x.pw/blog/"/>
+ <updated>2018-03-09T16:05:00-06:00</updated>
+ <id>http://v3x.pw/blog</id>
  <author>
    <name>Chris Pauley</name>
    <email></email>
@@ -13,10 +13,49 @@
 
  
  <entry>
+   <title>Firefox Focus for Android is not necessarily secure</title>
+   <link href="http://v3x.pw/blog/2018/03/09/focus-not-necessarily-secure"/>
+   <updated>2018-03-09T00:00:00-06:00</updated>
+   <id>http://v3x.pw/blog/2018/03/09/focus-not-necessarily-secure</id>
+   <content type="html">&lt;p&gt;Firefox Focus is Mozilla&amp;#39;s attempt at a privacy-first mobile browser. By all accounts, it&amp;#39;s a great attempt at solving the browser privacy issue on mobile devices. Many complain about the lack of features, but for those focused on maintaining privacy, having less features can many times come as a relief.&lt;/p&gt;
+
+&lt;p&gt;I noticed the other day that after running the browser, clearing everything, and opening up a new session I still had links marked as visited. As the main claim of the browser is that it automatically erases your browser history, this is a bit concerning. &lt;a href=&quot;https://github.com/mozilla-mobile/focus-android/issues/322&quot;&gt;I am not the first&lt;/a&gt; to find this issue, and there is a fix on the way. The whole situation is still a bit concerning.&lt;/p&gt;
+
+&lt;p&gt;Many years ago &lt;a href=&quot;https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/&quot;&gt;Mozilla posted&lt;/a&gt; about changes they had made to make sure that an attacker would not be able to generate a list of websites a user had visited by checking the style of visited links. The changes were effective and thorough, but even by their own admission, &lt;a href=&quot;https://dbaron.org/mozilla/visited-privacy#limits&quot;&gt;would not be all-encompassing&lt;/a&gt;. Firefox Focus would truly mitigate all attacks of this kind if the claims of removing browser history were as true as one might hope (or more worryingly, one might assume).&lt;/p&gt;
+
+&lt;h2&gt;The Bug&lt;/h2&gt;
+
+&lt;p&gt;The bug could be classified as a bug not with Focus, but rather with chromium. This is the stance the firefox team seem to be taking, and it is reasonably valid. The &lt;a href=&quot;https://chromium.googlesource.com/chromium/src.git/+/d0ef9df6be5983f6df7e4e050bbad4eb5030e7a2/android_webview/browser/aw_browser_context.cc#140&quot;&gt;vector of links&lt;/a&gt; is added to automatically, and there&amp;#39;s &lt;a href=&quot;https://github.com/mozilla-mobile/focus-android/issues/322&quot;&gt;no good way&lt;/a&gt; to trigger that to empty from within java. This has been marked as a priority 2 issue by the chromium team and will not be fixed anytime soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ahunt&quot;&gt;Andrzej Hunt&lt;/a&gt; had the right notion to see if the browser context could be unloaded, I don&amp;#39;t know that I entirely agree with the notion that this could not happen other ways. They implement their own system web view which I believe could be destroyed and reloaded, forcing that memory to be dumped and thus getting rid of the list of visited links. For an example of this in action we can look to the Google Chrome app. The incognito tabs in the chrome app not only clear this data but do not share it between tabs. The clear history function also removes this list. They already do a good job of removing on-disk caches, all that needs to happen is have that memory dumped.&lt;/p&gt;
+
+&lt;h2&gt;The Fix&lt;/h2&gt;
+
+&lt;p&gt;The slightly more concerning thing to me is the fix that has been implemented in the beta. The firefox team has &lt;a href=&quot;https://github.com/mozilla-mobile/focus-android/commit/252f761edd20b9ff1f1936862cdb4958a6d044cc&quot;&gt;implemented a fix&lt;/a&gt; which seems very much like a band-aid. It injects javascript which clears styling rules based on the links in this array (they are accessed by the :visited state of links). This is not only a messy solution from an engineering perspective, but also only sweeps the actual problem under the rug.&lt;/p&gt;
+
+&lt;p&gt;Fixes like these do not need to be concerning from the standpoint of whether or not the bug is fixed, but rather from an architectural standpoint. In my day-to-day where privacy is not a huge concern, these types of fixes are a big warning sign that the changes introduce technical debt, poor performance, and will likely break. The real issue is not whether or not the bug was addressed, but the architectural problem of how it was addressed.&lt;/p&gt;
+
+&lt;p&gt;From a security standpoint, these types of fixes are even more concerning. This gives the appearance of a reduction of attack surface, but in reality only mitigate a single attack vector. This may make the app feel more secure, but it leaves the user un-aware of the technical reality that not all traces of their browsing history have been erased.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t want to come off as paranoid or extremely upset over this issue, but sweeping issues under the rug like this does not bode well for the claim of privacy made by the firefox team. True privacy and security are upheld by strict standards; the claim of &amp;#39;erasing your browsing history&amp;#39; should not only be effectively true, but technically true. While this one bug may seem small and the fix good enough, I believe that we should hold ourselves (especially in the open source community) to a higher standard when it comes to privacy.&lt;/p&gt;
+
+&lt;h2&gt;The Good News&lt;/h2&gt;
+
+&lt;p&gt;This bug may not be relevant all that much longer. The firefox team is working on dropping the WebKit renderer for their own Gecko. This would be a huge win for the project, albeit a lot of work. In that scenario any bugs like this could easily be mitigated because both projects are open source. In the current build of the gecko client the bug I have mentioned is already fixed. I am very excited for the gecko viewer to become the renderer for the Focus project.&lt;/p&gt;
+
+&lt;h2&gt;In Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope the members of the firefox team and contributors to the project don&amp;#39;t take this harshly as I very much believe they are doing great work and in perusing the source code of the project while writing this I was thoroughly impressed. Everyone involved is doing great work, and I hope the standards shown throughout the rest of the codebase are kept for a long time to come.&lt;/p&gt;
+
+&lt;p&gt;For everyone else, do remember that security is difficult and must be watched with a close eye. Even decade-old exploits can rear their heads if we are not very intentional with every line of code we write.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Missing Puppeteer Examples</title>
-   <link href="http://v3x.pw/blog//2017/09/29/puppeteer-connect-proxy-cookies"/>
+   <link href="http://v3x.pw/blog/2017/09/29/puppeteer-connect-proxy-cookies"/>
    <updated>2017-09-29T00:00:00-05:00</updated>
-   <id>http://v3x.pw/blog//2017/09/29/puppeteer-connect-proxy-cookies</id>
+   <id>http://v3x.pw/blog/2017/09/29/puppeteer-connect-proxy-cookies</id>
    <content type="html">&lt;p&gt;Google finally released &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Chrome Headless&lt;/a&gt; and shortly after, a nodejs library called &lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/&quot;&gt;Puppeteer&lt;/a&gt;. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, &lt;/p&gt;
 
 &lt;h3&gt;Connecting to an existing process&lt;/h3&gt;

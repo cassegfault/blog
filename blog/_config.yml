@@ -8,9 +8,9 @@ permalink: /:categories/:year/:month/:day/:title
 # Setup
 title:            v3x
 tagline:          'dev blog'
-description:      'Authored by <a href="https://twitter.com/mdo" target="_blank">@chrispauley</a>.'
-url:              http://v3x.pw/blog/
-baseurl:          /blog/
+description:      'Authored by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.'
+url:              http://v3x.pw/blog
+baseurl:          /blog
 
 author:
   name:           'Chris Pauley'

@@ -1,1 +1,1 @@
-Sitemap: http://v3x.pw/blog//blog/sitemap.xml
+Sitemap: http://v3x.pw/blog/blog/sitemap.xml
