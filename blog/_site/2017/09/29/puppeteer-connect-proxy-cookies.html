@@ -16,12 +16,12 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/blog/public/css/poole.css">
-  <link rel="stylesheet" href="/blog/public/css/syntax.css">
-  <link rel="stylesheet" href="/blog/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="/blogpublic/favicon.png">
+  <link rel="shortcut icon" href="public/favicon.png">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -34,25 +34,17 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="http://v3x.pw/blog">
+        <a href="http://localhost:4000">
           v3x
         </a>
       </h1>
-      <p class="lead">Authored by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.</p>
+      <p class="lead">Blog by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/blog">Home</a>
-
       
       
         
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/blog/about">About</a>
           
         
       
@@ -66,9 +58,16 @@
       
         
       
+        
+      
+	  <ul class="unstyled-list">
+		  <li><a href="https://www.github.com/chris-pauley"><i class="icon-github"></i></a></li>
+		  <li><a href="https://twitter.com/chrispauley"><i class="icon-twitter"></i></a></li>
+		  <li><a href="/atom.xml"><i class="icon-rss"></i></a></li>
+	  </ul>
     </nav>
 
-    <p class="copyright">&copy; 2018. All rights reserved.</p>
+	<p class="copyright"><a href="https://twitter.com/chrispauley">@ChrisPauley</a> 2019</p>
   </div>
 </div>
 
@@ -78,6 +77,8 @@
   <h1 class="post-title">Missing Puppeteer Examples</h1>
   <span class="post-date">29 Sep 2017</span>
   <p>Google finally released <a href="https://developers.google.com/web/updates/2017/04/headless-chrome">Chrome Headless</a> and shortly after, a nodejs library called <a href="https://github.com/GoogleChrome/puppeteer/">Puppeteer</a>. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, </p>
+
+<!--readmore-->
 
 <h3>Connecting to an existing process</h3>
 
@@ -142,9 +143,27 @@
     
       <li>
         <h3>
-          <a href="/2017/09/29/puppeteer-connect-proxy-cookies/2018/03/09/focus-not-necessarily-secure">
-            Firefox Focus for Android is not necessarily secure
-            <small>09 Mar 2018</small>
+          <a href="/2017/09/29/puppeteer-connect-proxy-cookies/2019/04/06/helloAudio-store">
+            The Hello Audio Store
+            <small>06 Apr 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/09/29/puppeteer-connect-proxy-cookies/2019/04/02/importance-of-cache">
+            Taking Advantage of Modern CPU Advancements
+            <small>02 Apr 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/09/29/puppeteer-connect-proxy-cookies/2019/03/31/helloAudio-server-load">
+            Load Balancing for helloAudio
+            <small>31 Mar 2019</small>
           </a>
         </h3>
       </li>

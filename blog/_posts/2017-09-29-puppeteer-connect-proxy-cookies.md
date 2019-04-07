@@ -5,7 +5,7 @@ title: Missing Puppeteer Examples
 
 Google finally released [Chrome Headless](https://developers.google.com/web/updates/2017/04/headless-chrome) and shortly after, a nodejs library called [Puppeteer](https://github.com/GoogleChrome/puppeteer/). They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, 
 
-
+<!--readmore-->
 ### Connecting to an existing process
 
 The first thing that can be difficult is attaching to existing chrome processes. I use this quite a bit as I don't like having multiple servers running chrome or god forbid multiple chrome instances up on a single server. After you've got chrome headless running (which can be a pain due to the dependencies) you'll need to run an http request to `localhost:9222/json/version` in order to get the `webSocketDebuggerUrl` which you're going to pass to `browserWSEndpoint` when running [Puppeteer's `connect`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerconnectoptions) function.

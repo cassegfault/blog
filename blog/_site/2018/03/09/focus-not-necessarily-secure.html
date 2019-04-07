@@ -16,12 +16,12 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/blog/public/css/poole.css">
-  <link rel="stylesheet" href="/blog/public/css/syntax.css">
-  <link rel="stylesheet" href="/blog/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="/blogpublic/favicon.png">
+  <link rel="shortcut icon" href="public/favicon.png">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -34,25 +34,17 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="http://v3x.pw/blog">
+        <a href="http://localhost:4000">
           v3x
         </a>
       </h1>
-      <p class="lead">Authored by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.</p>
+      <p class="lead">Blog by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/blog">Home</a>
-
       
       
         
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/blog/about">About</a>
           
         
       
@@ -66,9 +58,16 @@
       
         
       
+        
+      
+	  <ul class="unstyled-list">
+		  <li><a href="https://www.github.com/chris-pauley"><i class="icon-github"></i></a></li>
+		  <li><a href="https://twitter.com/chrispauley"><i class="icon-twitter"></i></a></li>
+		  <li><a href="/atom.xml"><i class="icon-rss"></i></a></li>
+	  </ul>
     </nav>
 
-    <p class="copyright">&copy; 2018. All rights reserved.</p>
+	<p class="copyright"><a href="https://twitter.com/chrispauley">@ChrisPauley</a> 2019</p>
   </div>
 </div>
 
@@ -82,6 +81,8 @@
 <p>I noticed the other day that after running the browser, clearing everything, and opening up a new session I still had links marked as visited. As the main claim of the browser is that it automatically erases your browser history, this is a bit concerning. <a href="https://github.com/mozilla-mobile/focus-android/issues/322">I am not the first</a> to find this issue, and there is a fix on the way. The whole situation is still a bit concerning.</p>
 
 <p>Many years ago <a href="https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/">Mozilla posted</a> about changes they had made to make sure that an attacker would not be able to generate a list of websites a user had visited by checking the style of visited links. The changes were effective and thorough, but even by their own admission, <a href="https://dbaron.org/mozilla/visited-privacy#limits">would not be all-encompassing</a>. Firefox Focus would truly mitigate all attacks of this kind if the claims of removing browser history were as true as one might hope (or more worryingly, one might assume).</p>
+
+<!--readmore-->
 
 <h2>The Bug</h2>
 
@@ -117,9 +118,27 @@
     
       <li>
         <h3>
-          <a href="/2018/03/09/focus-not-necessarily-secure/2017/09/29/puppeteer-connect-proxy-cookies">
-            Missing Puppeteer Examples
-            <small>29 Sep 2017</small>
+          <a href="/2018/03/09/focus-not-necessarily-secure/2019/04/06/helloAudio-store">
+            The Hello Audio Store
+            <small>06 Apr 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/03/09/focus-not-necessarily-secure/2019/04/02/importance-of-cache">
+            Taking Advantage of Modern CPU Advancements
+            <small>02 Apr 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/03/09/focus-not-necessarily-secure/2019/03/31/helloAudio-server-load">
+            Load Balancing for helloAudio
+            <small>31 Mar 2019</small>
           </a>
         </h3>
       </li>

@@ -252,3 +252,27 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Icon Classes */
+.icon-github,
+.icon-twitter,
+.icon-rss {
+	width:18px;
+	height:18px;
+	background-size: 18px 18px;
+	display:block;
+}
+
+.icon-github {
+	background-image: url(/public/gh.svg);
+}
+.icon-twitter {
+	background-image: url(/public/twitter.svg);
+}
+.icon-rss {
+	background-image: url(/public/rss.svg);
+}
+
+.text-right { text-align:right; }
+.unstyled-list { list-style: none; display:flex; justify-content: space-between; margin: 0;  padding: 0; width: 100%; }
+.unstyled-list>li { margin:0 auto; padding:0; display:inline-block; }

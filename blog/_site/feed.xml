@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>v3x</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2019-04-07T11:21:18-04:00</updated>
- <id>http://localhost:4000</id>
- <author>
-   <name>Chris Pauley</name>
-   <email>chrispauley@protonmail.com</email>
- </author>
-
- 
- <entry>
-   <title>The Hello Audio Store</title>
-   <link href="http://localhost:4000/2019/04/06/helloAudio-store"/>
-   <updated>2019-04-06T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/04/06/helloAudio-store</id>
-   <content type="html">&lt;p&gt;For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-07T11:21:18-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">v3x</title><subtitle>Blog by &lt;a href=&quot;https://github.com/chris-pauley&quot; target=&quot;_blank&quot;&gt;@chris-pauley&lt;/a&gt;.</subtitle><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><entry><title type="html">The Hello Audio Store</title><link href="http://localhost:4000/2019/04/06/helloAudio-store" rel="alternate" type="text/html" title="The Hello Audio Store" /><published>2019-04-06T00:00:00-04:00</published><updated>2019-04-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/04/06/helloAudio-store</id><content type="html" xml:base="http://localhost:4000/2019/04/06/helloAudio-store">&lt;p&gt;For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes.&lt;/p&gt;
 
 &lt;p&gt;The Store class provides a centralized place for this state to be held and provides functionality for it to be observed. &lt;/p&gt;
 
@@ -286,16 +267,7 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myCallback&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* ... */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;myStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'todos.@each.done'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'account.preferences.notifications'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myCallback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Observer callbacks will only fire when one of the dependent keys is modified or one of the children of the dependent keys is modified. For example, when &lt;code&gt;account.preferences&lt;/code&gt;  is observed and &lt;code&gt;account.preferences.notifications&lt;/code&gt; is changed, the observer will fire.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Taking Advantage of Modern CPU Advancements</title>
-   <link href="http://localhost:4000/2019/04/02/importance-of-cache"/>
-   <updated>2019-04-02T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/04/02/importance-of-cache</id>
-   <content type="html">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
+&lt;p&gt;Observer callbacks will only fire when one of the dependent keys is modified or one of the children of the dependent keys is modified. For example, when &lt;code&gt;account.preferences&lt;/code&gt;  is observed and &lt;code&gt;account.preferences.notifications&lt;/code&gt; is changed, the observer will fire.&lt;/p&gt;</content><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><summary type="html">For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes. The Store class provides a centralized place for this state to be held and provides functionality for it to be observed.</summary></entry><entry><title type="html">Taking Advantage of Modern CPU Advancements</title><link href="http://localhost:4000/2019/04/02/importance-of-cache" rel="alternate" type="text/html" title="Taking Advantage of Modern CPU Advancements" /><published>2019-04-02T00:00:00-04:00</published><updated>2019-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2019/04/02/importance-of-cache</id><content type="html" xml:base="http://localhost:4000/2019/04/02/importance-of-cache">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
 
 &lt;h2&gt;Taking Advantage of Modern CPU Advancements&lt;/h2&gt;
 
@@ -323,16 +295,7 @@
 
 &lt;h3&gt;Final Thoughts&lt;/h3&gt;
 
-&lt;p&gt;For most it&amp;#39;s going to be easiest to either use a thread-per-connection model or to have a single event loop running across multiple threads. As that architecture scales it will be easier to reduce time spent in the handler than to adjust the underlying architecture. However, when performance is of utmost importance and a very high load (especially load which will be doing a lot of DB access or other network IO), taking these considerations in mind will provide opportunities to improve request time and provide a more consistent latency.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Load Balancing for helloAudio</title>
-   <link href="http://localhost:4000/2019/03/31/helloAudio-server-load"/>
-   <updated>2019-03-31T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/03/31/helloAudio-server-load</id>
-   <content type="html">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
+&lt;p&gt;For most it&amp;#39;s going to be easiest to either use a thread-per-connection model or to have a single event loop running across multiple threads. As that architecture scales it will be easier to reduce time spent in the handler than to adjust the underlying architecture. However, when performance is of utmost importance and a very high load (especially load which will be doing a lot of DB access or other network IO), taking these considerations in mind will provide opportunities to improve request time and provide a more consistent latency.&lt;/p&gt;</content><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><summary type="html">This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here. Taking Advantage of Modern CPU Advancements Over the past several years processor clock speeds have not improved much. The Pentium 4 in 2004 had a base clock speed of 2.4Ghz compared to the Ryzen 2700X at 3.7GHz or the i9 at 3.6GHz both released in 2018, 14 years later. That&amp;#39;s only 150% improvement over nearly a decade and a half. Obviously the important thing to note here is core count. With 8 cores now being standard that rate of improvement is still substantial. However, scaling with cores does not come as easily as scaling with processor speed. The following are charts of the base clock, memory bandwidth, and core count of Intel processors of the past several years. As described above, the base clock and bandwidth have hardly moved, but there have been significant improvements in core counts.</summary></entry><entry><title type="html">Load Balancing for helloAudio</title><link href="http://localhost:4000/2019/03/31/helloAudio-server-load" rel="alternate" type="text/html" title="Load Balancing for helloAudio" /><published>2019-03-31T00:00:00-04:00</published><updated>2019-03-31T00:00:00-04:00</updated><id>http://localhost:4000/2019/03/31/helloAudio-server-load</id><content type="html" xml:base="http://localhost:4000/2019/03/31/helloAudio-server-load">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
 
 &lt;h2&gt;Load Balancing on the API Server&lt;/h2&gt;
 
@@ -375,16 +338,7 @@ POST /file
 
 &lt;h3&gt;Load Balancing the Easy Way&lt;/h3&gt;
 
-&lt;p&gt;These posts and the helloAudio project are specifically for me to explore approaches to solving problems which I find interesting. Throughout the post you may have been thinking about how a thread-per-connection model maintains thread safety and is load balanced by the OS or how running a single io context across multiple threads could load balance with far less code. I have added some requirements to this architecture specifically to have a bit of fun. This is not meant to be a prescriptive post about how an API server should be written, but instead a description of how I have developed a pretty performant and easy to use server for a specific set of constraints. Hopefully my notes bring some perspective or even can be adapted for your own needs.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Firefox Focus for Android is not necessarily secure</title>
-   <link href="http://localhost:4000/2018/03/09/focus-not-necessarily-secure"/>
-   <updated>2018-03-09T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2018/03/09/focus-not-necessarily-secure</id>
-   <content type="html">&lt;p&gt;Firefox Focus is Mozilla&amp;#39;s attempt at a privacy-first mobile browser. By all accounts, it&amp;#39;s a great attempt at solving the browser privacy issue on mobile devices. Many complain about the lack of features, but for those focused on maintaining privacy, having less features can many times come as a relief.&lt;/p&gt;
+&lt;p&gt;These posts and the helloAudio project are specifically for me to explore approaches to solving problems which I find interesting. Throughout the post you may have been thinking about how a thread-per-connection model maintains thread safety and is load balanced by the OS or how running a single io context across multiple threads could load balance with far less code. I have added some requirements to this architecture specifically to have a bit of fun. This is not meant to be a prescriptive post about how an API server should be written, but instead a description of how I have developed a pretty performant and easy to use server for a specific set of constraints. Hopefully my notes bring some perspective or even can be adapted for your own needs.&lt;/p&gt;</content><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><summary type="html">This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here. Load Balancing on the API Server The API server for HelloAudio has a somewhat unique workload. It will be filled with both simple short-lived connections for reading and writing to the database, longer connections for transferring files, and compute-heavy connections for audio processing. The majority of the connections will be in the first two categories. The architecture of the API is quite versatile, but does focus on shorter connections that will need to communicate with database and storage servers. The API has a thread pool and each thread has a worker pool which asynchronously work through requests in the threads queue. This creates a choke-point in which a particularly heavy compute request could be processed by a worker while there are a number of smaller connections in the queue. There is no way to know whether a connection will be long or short until that connection has been accepted and read by a worker. However, when accepting a connection we can check on each thread and determine which is most likely to handle the connection the fastest. In order to do this, we need some way to predict the amount of time it takes a thread to completely burn through its queue.</summary></entry><entry><title type="html">Firefox Focus for Android is not necessarily secure</title><link href="http://localhost:4000/2018/03/09/focus-not-necessarily-secure" rel="alternate" type="text/html" title="Firefox Focus for Android is not necessarily secure" /><published>2018-03-09T00:00:00-05:00</published><updated>2018-03-09T00:00:00-05:00</updated><id>http://localhost:4000/2018/03/09/focus-not-necessarily-secure</id><content type="html" xml:base="http://localhost:4000/2018/03/09/focus-not-necessarily-secure">&lt;p&gt;Firefox Focus is Mozilla&amp;#39;s attempt at a privacy-first mobile browser. By all accounts, it&amp;#39;s a great attempt at solving the browser privacy issue on mobile devices. Many complain about the lack of features, but for those focused on maintaining privacy, having less features can many times come as a relief.&lt;/p&gt;
 
 &lt;p&gt;I noticed the other day that after running the browser, clearing everything, and opening up a new session I still had links marked as visited. As the main claim of the browser is that it automatically erases your browser history, this is a bit concerning. &lt;a href=&quot;https://github.com/mozilla-mobile/focus-android/issues/322&quot;&gt;I am not the first&lt;/a&gt; to find this issue, and there is a fix on the way. The whole situation is still a bit concerning.&lt;/p&gt;
 
@@ -416,16 +370,7 @@ POST /file
 
 &lt;p&gt;I hope the members of the firefox team and contributors to the project don&amp;#39;t take this harshly as I very much believe they are doing great work and in perusing the source code of the project while writing this I was thoroughly impressed. Everyone involved is doing great work, and I hope the standards shown throughout the rest of the codebase are kept for a long time to come.&lt;/p&gt;
 
-&lt;p&gt;For everyone else, do remember that security is difficult and must be watched with a close eye. Even decade-old exploits can rear their heads if we are not very intentional with every line of code we write.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Missing Puppeteer Examples</title>
-   <link href="http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies"/>
-   <updated>2017-09-29T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies</id>
-   <content type="html">&lt;p&gt;Google finally released &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Chrome Headless&lt;/a&gt; and shortly after, a nodejs library called &lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/&quot;&gt;Puppeteer&lt;/a&gt;. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, &lt;/p&gt;
+&lt;p&gt;For everyone else, do remember that security is difficult and must be watched with a close eye. Even decade-old exploits can rear their heads if we are not very intentional with every line of code we write.&lt;/p&gt;</content><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><summary type="html">Firefox Focus is Mozilla&amp;#39;s attempt at a privacy-first mobile browser. By all accounts, it&amp;#39;s a great attempt at solving the browser privacy issue on mobile devices. Many complain about the lack of features, but for those focused on maintaining privacy, having less features can many times come as a relief. I noticed the other day that after running the browser, clearing everything, and opening up a new session I still had links marked as visited. As the main claim of the browser is that it automatically erases your browser history, this is a bit concerning. I am not the first to find this issue, and there is a fix on the way. The whole situation is still a bit concerning. Many years ago Mozilla posted about changes they had made to make sure that an attacker would not be able to generate a list of websites a user had visited by checking the style of visited links. The changes were effective and thorough, but even by their own admission, would not be all-encompassing. Firefox Focus would truly mitigate all attacks of this kind if the claims of removing browser history were as true as one might hope (or more worryingly, one might assume).</summary></entry><entry><title type="html">Missing Puppeteer Examples</title><link href="http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies" rel="alternate" type="text/html" title="Missing Puppeteer Examples" /><published>2017-09-29T00:00:00-04:00</published><updated>2017-09-29T00:00:00-04:00</updated><id>http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies</id><content type="html" xml:base="http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies">&lt;p&gt;Google finally released &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Chrome Headless&lt;/a&gt; and shortly after, a nodejs library called &lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/&quot;&gt;Puppeteer&lt;/a&gt;. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, &lt;/p&gt;
 
 &lt;!--readmore--&gt;
 
@@ -482,9 +427,4 @@ POST /file
 &lt;span class=&quot;kr&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cookies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hopefully some of these are helpful, hopefully the Puppeteer team will update their docs.&lt;/p&gt;
-</content>
- </entry>
- 
-
-</feed>
+&lt;p&gt;Hopefully some of these are helpful, hopefully the Puppeteer team will update their docs.&lt;/p&gt;</content><author><name>Chris Pauley</name><email>chrispauley@protonmail.com</email></author><summary type="html">Google finally released Chrome Headless and shortly after, a nodejs library called Puppeteer. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy,</summary></entry></feed>

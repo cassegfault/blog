@@ -9,6 +9,7 @@ I noticed the other day that after running the browser, clearing everything, and
 
 Many years ago [Mozilla posted](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) about changes they had made to make sure that an attacker would not be able to generate a list of websites a user had visited by checking the style of visited links. The changes were effective and thorough, but even by their own admission, [would not be all-encompassing](https://dbaron.org/mozilla/visited-privacy#limits). Firefox Focus would truly mitigate all attacks of this kind if the claims of removing browser history were as true as one might hope (or more worryingly, one might assume).
 
+<!--readmore-->
 ## The Bug
 
 The bug could be classified as a bug not with Focus, but rather with chromium. This is the stance the firefox team seem to be taking, and it is reasonably valid. The [vector of links](https://chromium.googlesource.com/chromium/src.git/+/d0ef9df6be5983f6df7e4e050bbad4eb5030e7a2/android_webview/browser/aw_browser_context.cc#140) is added to automatically, and there's [no good way](https://github.com/mozilla-mobile/focus-android/issues/322) to trigger that to empty from within java. This has been marked as a priority 2 issue by the chromium team and will not be fixed anytime soon.
