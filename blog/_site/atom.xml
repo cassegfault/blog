@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>v3x</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2019-04-07T11:32:19-04:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://v3x.pw/blog/atom.xml" rel="self"/>
+ <link href="http://v3x.pw/blog/"/>
+ <updated>2019-04-07T11:34:39-04:00</updated>
+ <id>http://v3x.pw/blog</id>
  <author>
    <name>Chris Pauley</name>
    <email>chrispauley@protonmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>The Hello Audio Store</title>
-   <link href="http://localhost:4000/2019/04/06/helloAudio-store"/>
+   <link href="http://v3x.pw/blog/2019/04/06/helloAudio-store"/>
    <updated>2019-04-06T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/04/06/helloAudio-store</id>
+   <id>http://v3x.pw/blog/2019/04/06/helloAudio-store</id>
    <content type="html">&lt;p&gt;For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes.&lt;/p&gt;
 
 &lt;p&gt;The Store class provides a centralized place for this state to be held and provides functionality for it to be observed. &lt;/p&gt;
@@ -292,9 +292,9 @@
  
  <entry>
    <title>Taking Advantage of Modern CPU Advancements</title>
-   <link href="http://localhost:4000/2019/04/02/importance-of-cache"/>
+   <link href="http://v3x.pw/blog/2019/04/02/importance-of-cache"/>
    <updated>2019-04-02T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/04/02/importance-of-cache</id>
+   <id>http://v3x.pw/blog/2019/04/02/importance-of-cache</id>
    <content type="html">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
 
 &lt;h2&gt;Taking Advantage of Modern CPU Advancements&lt;/h2&gt;
@@ -329,9 +329,9 @@
  
  <entry>
    <title>Load Balancing for helloAudio</title>
-   <link href="http://localhost:4000/2019/03/31/helloAudio-server-load"/>
+   <link href="http://v3x.pw/blog/2019/03/31/helloAudio-server-load"/>
    <updated>2019-03-31T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/03/31/helloAudio-server-load</id>
+   <id>http://v3x.pw/blog/2019/03/31/helloAudio-server-load</id>
    <content type="html">&lt;p&gt;This is a part of a series of posts that follow the development of a side project I&amp;#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&amp;#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.&lt;/p&gt;
 
 &lt;h2&gt;Load Balancing on the API Server&lt;/h2&gt;
@@ -381,9 +381,9 @@ POST /file
  
  <entry>
    <title>Firefox Focus for Android is not necessarily secure</title>
-   <link href="http://localhost:4000/2018/03/09/focus-not-necessarily-secure"/>
+   <link href="http://v3x.pw/blog/2018/03/09/focus-not-necessarily-secure"/>
    <updated>2018-03-09T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2018/03/09/focus-not-necessarily-secure</id>
+   <id>http://v3x.pw/blog/2018/03/09/focus-not-necessarily-secure</id>
    <content type="html">&lt;p&gt;Firefox Focus is Mozilla&amp;#39;s attempt at a privacy-first mobile browser. By all accounts, it&amp;#39;s a great attempt at solving the browser privacy issue on mobile devices. Many complain about the lack of features, but for those focused on maintaining privacy, having less features can many times come as a relief.&lt;/p&gt;
 
 &lt;p&gt;I noticed the other day that after running the browser, clearing everything, and opening up a new session I still had links marked as visited. As the main claim of the browser is that it automatically erases your browser history, this is a bit concerning. &lt;a href=&quot;https://github.com/mozilla-mobile/focus-android/issues/322&quot;&gt;I am not the first&lt;/a&gt; to find this issue, and there is a fix on the way. The whole situation is still a bit concerning.&lt;/p&gt;
@@ -422,9 +422,9 @@ POST /file
  
  <entry>
    <title>Missing Puppeteer Examples</title>
-   <link href="http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies"/>
+   <link href="http://v3x.pw/blog/2017/09/29/puppeteer-connect-proxy-cookies"/>
    <updated>2017-09-29T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2017/09/29/puppeteer-connect-proxy-cookies</id>
+   <id>http://v3x.pw/blog/2017/09/29/puppeteer-connect-proxy-cookies</id>
    <content type="html">&lt;p&gt;Google finally released &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Chrome Headless&lt;/a&gt; and shortly after, a nodejs library called &lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/&quot;&gt;Puppeteer&lt;/a&gt;. They have a decent document laying out how to use the API but a number of pieces are non-obvious. I needed to do a few things like connect to an existing chrome instance, use an http proxy, &lt;/p&gt;
 
 &lt;!--readmore--&gt;

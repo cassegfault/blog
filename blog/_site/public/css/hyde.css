@@ -264,13 +264,13 @@ a.sidebar-nav-item:focus {
 }
 
 .icon-github {
-	background-image: url(public/gh.svg);
+	background-image: url(gh.svg);
 }
 .icon-twitter {
-	background-image: url(public/twitter.svg);
+	background-image: url(twitter.svg);
 }
 .icon-rss {
-	background-image: url(public/rss.svg);
+	background-image: url(rss.svg);
 }
 
 .text-right { text-align:right; }
