@@ -11,7 +11,7 @@ tagline:          'dev blog'
 description:      'Blog by <a href="https://github.com/chris-pauley" target="_blank">@chris-pauley</a>.'
 url:              http://v3x.pw/blog
 excerpt_separator: "<!--readmore-->"
-#baseurl:          /blog
+baseurl:          /blog
 
 author:
   name:           'Chris Pauley'
