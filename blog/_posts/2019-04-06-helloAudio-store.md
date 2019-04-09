@@ -1,11 +1,11 @@
 ---
-title: The Hello Audio Store
+title: The helloAudio Store
 date: 2019-04-06
 ---
 
 For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes.
 
-The Store class provides a centralized place for this state to be held and provides functionality for it to be observed. 
+To handle all of this functionality, I developed `ts-quickstore`; a state management library written in typescript which provides a centralized place for this state to be held and provides functionality for it to be observed. It is available on npm and I have published the [source on my github](https://github.com/chris-pauley/ts-quickstore). In this post I'll go over how I designed it, why, and touch on how it's used.
 
 <!--readmore-->
 ## Internal Design

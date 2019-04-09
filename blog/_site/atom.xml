@@ -4,7 +4,7 @@
  <title>v3x</title>
  <link href="http://v3x.pw/blog/atom.xml" rel="self"/>
  <link href="http://v3x.pw/blog/"/>
- <updated>2019-04-07T11:47:28-04:00</updated>
+ <updated>2019-04-09T08:02:58-04:00</updated>
  <id>http://v3x.pw/blog</id>
  <author>
    <name>Chris Pauley</name>
@@ -13,13 +13,13 @@
 
  
  <entry>
-   <title>The Hello Audio Store</title>
+   <title>The helloAudio Store</title>
    <link href="http://v3x.pw/blog/2019/04/06/helloAudio-store"/>
    <updated>2019-04-06T00:00:00-04:00</updated>
    <id>http://v3x.pw/blog/2019/04/06/helloAudio-store</id>
    <content type="html">&lt;p&gt;For this application a large portion of the state is what would be stored as a project file on local machines. In this application, that file can be stored in a database as JSON, which can be quickly parsed when it is retrieved from the server. During runtime, this state must be watched to update the DOM when necessary. As this project may become quite large and complex, it requires functionality for observing specific elements for changes.&lt;/p&gt;
 
-&lt;p&gt;The Store class provides a centralized place for this state to be held and provides functionality for it to be observed. &lt;/p&gt;
+&lt;p&gt;To handle all of this functionality, I developed &lt;code&gt;ts-quickstore&lt;/code&gt;; a state management library written in typescript which provides a centralized place for this state to be held and provides functionality for it to be observed. It is available on npm and I have published the &lt;a href=&quot;https://github.com/chris-pauley/ts-quickstore&quot;&gt;source on my github&lt;/a&gt;. In this post I&amp;#39;ll go over how I designed it, why, and touch on how it&amp;#39;s used.&lt;/p&gt;
 
 &lt;!--readmore--&gt;
 
