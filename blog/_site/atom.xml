@@ -4,13 +4,81 @@
  <title>v3x</title>
  <link href="http://v3x.pw/blog/atom.xml" rel="self"/>
  <link href="http://v3x.pw/blog/"/>
- <updated>2019-04-19T09:46:19-04:00</updated>
+ <updated>2019-04-25T08:49:43-04:00</updated>
  <id>http://v3x.pw/blog</id>
  <author>
    <name>Chris Pauley</name>
    <email>chrispauley@protonmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>My Infrastructure</title>
+   <link href="http://v3x.pw/blog/2019/04/22/personal-infrastructure"/>
+   <updated>2019-04-22T00:00:00-04:00</updated>
+   <id>http://v3x.pw/blog/2019/04/22/personal-infrastructure</id>
+   <content type="html">&lt;p&gt;I have a fairly complicated setup for all of my personal infrastructure and I believe documenting it here may push me to make it better. &lt;/p&gt;
+
+&lt;p&gt;Machines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Primary Server / Workstation
+
+&lt;ul&gt;
+&lt;li&gt;12/24 Xeon with 64GB ram, single 1TB SSD&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;NAS
+
+&lt;ul&gt;
+&lt;li&gt;AMD FX6300 (6/6 @ 3.5GHz) with 8GB of ram, 4 2TB HDDs in a ZFS pool (RAIDZ)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Supermicro Router
+
+&lt;ul&gt;
+&lt;li&gt;Intel Atom D525 (2/4 @ 1.8GHz) 2GB ram, 32GB storage&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 3 B+&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 1 B&lt;/li&gt;
+&lt;li&gt;Several remotely hosted virtual private servers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Network&lt;/h2&gt;
+
+&lt;p&gt;All network traffic is managed by the &lt;a href=&quot;https://www.supermicro.com/index_home.cfm&quot;&gt;Supermicro&lt;/a&gt; router running &lt;a href=&quot;https://www.pfsense.org/&quot;&gt;PF Sense&lt;/a&gt;. PF Sense routes incoming traffic, segments internal networks, and is a convenient way for me to block some security cameras I have from accessing the web (I want them as a backup for insurance, don&amp;#39;t really want 24/7 streams of my house sent to the web).&lt;/p&gt;
+
+&lt;!--readmore--&gt;
+
+&lt;p&gt;The primary server and NAS are directly connected via the router box, other machines (phones, laptops, etc) access through a wifi access point which has its own network and rules on a separate interface on the router.&lt;/p&gt;
+
+&lt;p&gt;The Raspberry Pi 1 B is set up with &lt;a href=&quot;https://github.com/pi-hole/pi-hole&quot;&gt;PiHole&lt;/a&gt; and is awaiting a weekend where I can integrate it.&lt;/p&gt;
+
+&lt;p&gt;For now, the network setup is relatively simple. I hope to clean this up a bit in the future, have better name resolution for local machines, and finally set up the VPN properly so I can access my local network from the outside world.&lt;/p&gt;
+
+&lt;h2&gt;Externally Facing Applications&lt;/h2&gt;
+
+&lt;p&gt;I have a few websites and APIs I host (such as this one) which are all located on the primary server. This machine has a few too many purposes at the moment, and should be narrowed down. However, more machines require more space and that is not a luxury I have at the moment.&lt;/p&gt;
+
+&lt;p&gt;Once to the server, incoming traffic is primarily routed via &lt;a href=&quot;https://www.nginx.com/&quot;&gt;nginx&lt;/a&gt;. I have separate configurations for each application and they can be enabled or disabled quickly. Most applications are managed via a tool called &lt;a href=&quot;http://supervisord.org/&quot;&gt;supervisor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several areas for improvement here. I am currently working on containerizing each of the applications (using &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt;), as this machine is currently a mess. Nginx configurations should be versioned with the projects and there should be some understanding of what dependencies some of these projects have. &lt;/p&gt;
+
+&lt;p&gt;Another problem with this current setup is the database being run on the same machine as the applications utilizing it. These are separate concerns and have many reasons to be separated by hardware. In order to test the &lt;a href=&quot;https://v3x.pw/shared/http-server-concurrency.pdf&quot;&gt;high concurrency servers I wrote about&lt;/a&gt; with handlers requiring database connections I spun up a fresh copy of ubuntu and mysql using the NAS&amp;#39; hardware. A database machine is next on my list of probably unnecessary tech purchases.&lt;/p&gt;
+
+&lt;h2&gt;Internal Tooling&lt;/h2&gt;
+
+&lt;p&gt;One of my reasons for having all of this setup is to test ideas and learn. One of the tools that helps me the most in achieving that is stat tracking. I use the &lt;a href=&quot;https://github.com/statsd/statsd&quot;&gt;statsd&lt;/a&gt; / &lt;a href=&quot;https://graphiteapp.org/&quot;&gt;graphite&lt;/a&gt; / &lt;a href=&quot;https://grafana.com/&quot;&gt;grafana&lt;/a&gt; monitoring stack which allows me to track virtually any metric over time with relative ease. All of this is hosted on the Raspberry Pi 3.&lt;/p&gt;
+
+&lt;p&gt;One tool that I have that utilizes the stat tracking tools is a simple air quality monitor I built using an ESP8266 (microcontroller with wifi), BME280(humidity and temperature sensor), and CCS811(air quality breakout). The ESP8266 simply needs to send a UDP packet with a formatted string of readings and the stats tooling handles the rest.&lt;/p&gt;
+
+&lt;p&gt;I self host a few applications such as &lt;a href=&quot;https://sentry.io&quot;&gt;sentry&lt;/a&gt; on remotely hosted virtual private servers. These are typically bargin-bin servers that only cost a few bucks a year. These servers also host a proxy for me to send requests through (via &lt;a href=&quot;http://www.squid-cache.org/&quot;&gt;squid&lt;/a&gt;) and play a role in a mini-cdn I have for certain public-facing applications (routing for this is handled by &lt;a href=&quot;https://aws.amazon.com/route53/&quot;&gt;Amazon&amp;#39;s Route53&lt;/a&gt;). Deployment to those servers is handled by by &lt;a href=&quot;https://jenkins.io/&quot;&gt;Jenkins&lt;/a&gt;, which I host locally and could be improved with containerization.&lt;/p&gt;
+
+&lt;p&gt;My NAS I also consider internal tooling. I use it for backups, but primarily it serves as a storage device for my photos and videos. I enjoy photography and cinematography as a hobby when I travel, however over the years the amount of space that requires has become more than I feel safe keeping on a single drive. The NAS currently uses HDDs as it would not make a lot of sense financially to get SSDs. These are configured in RAID-Z (zfs&amp;#39; raid 5) for best utilization of compression while still allowing me relatively quick access to the photos when I need them.&lt;/p&gt;
+
+&lt;h2&gt;In Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Self hosting is a bit of an addiction, however if you re-use hardware, stick to bargin bin servers, and keep your energy consumption in check it will cost you a bunch of time but only a little bit of money.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hotfix Engineering</title>
