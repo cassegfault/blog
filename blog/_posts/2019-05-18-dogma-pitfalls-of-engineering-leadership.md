@@ -7,6 +7,8 @@ In the tech industry our leaders are held in high regard and the successful ones
 
 In this post I'll discuss one of the recently popular such styles of leadership: Dogmatic Leadership.
 
+<!--readmore-->
+
 ## Dogma
 
 The idea of dogma is to have a core set of values which are absolute. They are static and infallible, transcendent of time and context. Popularized by religion, these beliefs were handed down from a higher authority. In business however, these are the values and vision of the company.
