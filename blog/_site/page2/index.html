@@ -78,6 +78,31 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="http://v3x.pw/blog/2019/03/31/helloAudio-server-load">
+        Load Balancing for helloAudio
+      </a>
+    </h1>
+
+    <span class="post-date">31 Mar 2019</span>
+	
+		<p>This is a part of a series of posts that follow the development of a side project I&#39;ve been working on called HelloAudio, an in-browser multitrack audio editor. The project is primarily for exploring thoughts I&#39;ve had on technical implementations. As these pieces come to fruition I am writing about them here.</p>
+
+<h2>Load Balancing on the API Server</h2>
+
+<p>The API server for HelloAudio has a somewhat unique workload. It will be filled with both simple short-lived connections for reading and writing to the database, longer connections for transferring files, and compute-heavy connections for audio processing. The majority of the connections will be in the first two categories.</p>
+
+<p>The architecture of the API is quite versatile, but does focus on shorter connections that will need to communicate with database and storage servers. The API has a thread pool and each thread has a worker pool which asynchronously work through requests in the threads queue. This creates a choke-point in which a particularly heavy compute request could be processed by a worker while there are a number of smaller connections in the queue. There is no way to know whether a connection will be long or short until that connection has been accepted and read by a worker. </p>
+
+<p>However, when accepting a connection we can check on each thread and determine which is most likely to handle the connection the fastest. In order to do this, we need some way to predict the amount of time it takes a thread to completely burn through its queue.</p>
+
+		<div class="text-right">
+			<a href="http://v3x.pw/blog/2019/03/31/helloAudio-server-load">Continue Reading...</a>
+		</div>
+	
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://v3x.pw/blog/2018/03/09/focus-not-necessarily-secure">
         Firefox Focus for Android is not necessarily secure
       </a>
