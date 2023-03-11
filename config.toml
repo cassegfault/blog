@@ -1,0 +1,23 @@
+baseURL = "https://chris-pauley.github.io/blog/"
+title = "Chris' blog"
+pygmentsUseClasses = true
+uglyurls = true
+disablePathToLower = true
+rssLimit = 10
+[params]
+email = "chrispauley@protonmail.com"
+
+[permalinks]
+blog = "/:year/:month/:day/:filename"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+ordered = true
+
+[mediaTypes]
+
+[outputFormats]
+[outputs]
+section = ["HTML", "RSS"]
