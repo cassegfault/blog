@@ -1,4 +1,4 @@
-baseURL = "https://chris-pauley.github.io/blog/"
+baseURL = "https://lostfutures.dev/"
 title = "Chris' blog"
 pygmentsUseClasses = true
 uglyurls = true
