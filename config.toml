@@ -1,14 +1,25 @@
 baseURL = "https://lostfutures.dev/"
-title = "Chris' blog"
+theme='hugo-bearblog'
+title = "Lost Futures"
 pygmentsUseClasses = true
-uglyurls = true
-disablePathToLower = true
 rssLimit = 10
+
+author = "Chris Pauley"
+copyright = ""
+languageCode = "en-US"
+
+enableRobotsTXT = true
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
 [params]
-email = "chrispauley@protonmail.com"
+  email = "chrispauley@protonmail.com"
+  description = "Lost Futures is a blog by Chris Pauley"
+  title = "Lost Futures"
 
 [permalinks]
-blog = "/:year/:month/:day/:filename"
+  blog = "/:year/:month/:day/:filename"
 
 [markup.goldmark.renderer]
 unsafe = true
