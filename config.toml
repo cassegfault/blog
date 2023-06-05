@@ -4,7 +4,7 @@ title = "Lost Futures"
 pygmentsUseClasses = true
 rssLimit = 10
 
-author = "Chris Pauley"
+author = "Cass Williams-Pauley"
 copyright = ""
 languageCode = "en-US"
 
@@ -14,8 +14,8 @@ disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
-  email = "chrispauley@protonmail.com"
-  description = "Lost Futures is a blog by Chris Pauley"
+  email = "casswp@proton.me"
+  description = "Lost Futures is a blog by Cass Williams-Pauley"
   title = "Lost Futures"
 
 [permalinks]

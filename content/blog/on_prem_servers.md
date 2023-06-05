@@ -2,7 +2,7 @@
 date: 2023-03-13
 title: "On-Prem Deployment: Server Hardware"
 layout: post
-draft: true
+draft: ttrue
 ---
 
 Picking hardware these days is, in some ways, easier than ever. There are system integrators that will send ready-made systems, wide parts compatibility, and a wealth of knowledge online. The very first thing you need to consider, however, is _how much server you need_.
